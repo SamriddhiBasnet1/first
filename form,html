@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>VALIDATE FORM </title>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="validate.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+
+<body>
+
+<div id="wrapper">
+
+<form id="form" name="formval"  onsubmit=" return validate(this)" >
+
+  Username:<br>
+  <input type="text" name="Username" id="name" class="txt" >
+  <br>
+  
+  Email:<br>
+  <input type="text" placeholder="some@gmail.com"  id="email" class="txt"  ><br>
+  <br>
+
+  Phone Number:<br>
+  <input type="text" id="tel"  class="txt">
+  <br><br>
+
+
+  Gender:<br>
+  <input type="radio" name="Gender" value="female" checked > Female<br>
+  <input type="radio" name="Gender" value="male" > Male<br>
+  <br>
+
+  Birthday:<br>
+  <input type="date" name="Birthday" id="dob" onblur="ageCount()"  class="txt"><br>
+  <div id="ageId" ></div>
+  <br>
+
+  
+
+  <input type="submit" value="Submit" id="submit">
+  <input type="reset" id="reset">
+
+  <div>
+    <label for="checkbox">Click to proceed</label>
+    <input type="checkbox" name="Checkbox" id="check" >
+  
+ </div>
+
+
+</form> 
+
+<p> <br><span id="results"></span></p>
+<div id="app"></div>
+
+</div>
+
+</body>
+</html>
